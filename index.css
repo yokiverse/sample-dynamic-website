@@ -1,0 +1,76 @@
+
+
+.home-container {
+    animation: slideIn 0.8s ease forwards;
+    display: flex;  /*Enable flexbox */
+    flex-direction: column;  /*Align items vertically */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    padding: 22px;
+    color: #333; 
+    
+
+}
+.home-image{
+padding: 0px;
+margin: 0px;
+
+}
+body{
+background-color: peachpuff ;
+}
+
+
+.animate-button {
+transition: transform 0.3s ease, background-color 0.4s ease, box-shadow 0.4s ease;
+font-family: 'Pacifico', cursive;
+background: linear-gradient(45deg, #DAA520, #FF7F50); /* Gradient background */
+color: white;
+padding: 15px 32px;
+border: none;
+border-radius: 8px;
+font-size: 16px;
+cursor: pointer;
+position: relative;
+overflow: hidden; /* For pseudo-element effects */
+}
+
+.animate-button:hover {
+background: linear-gradient(45deg, #FF6347, #4682B4); /* Gradient shift on hover */
+color: white;
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Glowing shadow */
+transform: scale(1.1); /* Enlarge button */
+}
+
+.animate-button::after {
+content: '';
+position: absolute;
+top: 0;
+left: -100%;
+width: 300%;
+height: 100%;
+background: rgba(255, 255, 255, 0.2); /* Light overlay effect */
+transform: skewX(-30deg);
+transition: left 0.5s ease;
+}
+
+.animate-button:hover::after {
+left: 100%; 
+}
+
+h1 {
+font-family: 'Pacifico', cursive;
+}
+
+
+@keyframes slideIn {
+from {
+    transform: translateX(100%); /* Start off-screen to the right */
+    opacity: 0; /* Start transparent */
+}
+to {
+    transform: translateX(0); /* End at original position */
+    opacity: 1; /* Fully visible */
+}
+}

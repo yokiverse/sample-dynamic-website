@@ -1,0 +1,97 @@
+/* Logo Animation */
+.logo {
+  width: 50px;
+  height: 50px;
+  animation: slideRightToLeft 2s ease-out forwards;
+}
+
+/* Keyframes for Logo Animation */
+@keyframes slideRightToLeft {
+  from {
+    transform: translateX(1000px); /* Start off-screen to the right */
+    opacity: 0; /* Start transparent */
+  }
+  to {
+    transform: translateX(0%); /* End at original position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: peachpuff;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Navbar Links Animation */
+.navbar-nav .nav-link {
+  position: relative;
+  color: white; /* Link text color */
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px 15px;
+  transition: transform 0.3s ease, background-color 0.4s ease, box-shadow 0.4s ease;
+  color: #333; 
+  border-radius: 8px;
+  overflow: hidden; /* To clip the hover effect */
+}
+
+.navbar-nav .nav-link:hover {
+  background: linear-gradient(45deg, #FF6347, #4682B4); /* Gradient shift on hover */
+  color: white;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Glowing shadow */
+  transform: scale(1.1); /* Enlarge slightly on hover */
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 300%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2); /* Light overlay effect */
+  transform: skewX(-30deg);
+  transition: left 0.5s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+  left: 100%; /* Moves the light overlay across the link on hover */
+}
+
+
+.whoweare{
+  text-align: justify;
+}
+
+#title{
+  font-size: 24px;
+  font-family: 'Pacifico', cursive;
+}
+
+.video-container{
+  position: relative;
+  align-items: center;
+  padding-left: 35px;
+  width: 100%;
+}
+p{
+  font-size: 20px;
+  line-height: 2.8;
+  font-family: 'Pacifico', cursive;
+}
+/* Slide-In Animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%); /* Start off-screen to the right */
+    opacity: 0; /* Start transparent */
+  }
+  to {
+    transform: translateX(0); /* End at original position */
+    opacity: 1; /* Fully visible */
+  }
+}
